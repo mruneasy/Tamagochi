@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="275.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SecondController">
+   <children>
+      <ImageView fitHeight="458.0" fitWidth="712.0" layoutX="-3.0" layoutY="-173.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@pics/crosh/backgroud.jpg" />
+         </image>
+      </ImageView>
+      <ImageView id="img" fx:id="img" fitHeight="147.0" fitWidth="300.0" layoutX="2.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@pics/crosh/eat.gif" />
+         </image>
+      </ImageView>
+      <ProgressBar fx:id="feeling" layoutX="215.0" layoutY="69.0" mouseTransparent="true" prefHeight="18.0" prefWidth="75.0" progress="1.0" style="-fx-accent: green;" />
+      <ImageView id="img1" fx:id="img1" fitHeight="147.0" fitWidth="300.0" layoutX="5.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@pics/crosh/moonWalk.gif" />
+         </image>
+      </ImageView>
+      <Text layoutX="216.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Настроение:" wrappingWidth="75.0" />
+      <ImageView fx:id="carefully" fitHeight="88.0" fitWidth="148.0" layoutX="83.0" layoutY="141.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@pics/sonic/carefully.gif" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="cry" fitHeight="165.0" fitWidth="368.0" layoutX="-32.0" layoutY="87.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@pics/crosh/cry.gif" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="rainPic" fitHeight="252.0" fitWidth="393.0" layoutX="-6.0" layoutY="-23.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@pics/sonic/rain.gif" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="snowPic" fitHeight="383.0" fitWidth="313.0" layoutX="-7.0" layoutY="-114.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@pics/sonic/snow.gif" />
+         </image>
+      </ImageView>
+      <Button id="button" fx:id="button" disable="true" layoutX="115.0" layoutY="25.0" mnemonicParsing="false" onMousePressed="#h" text="Покормить" />
+      <Button fx:id="birth" layoutX="14.0" layoutY="25.0" mnemonicParsing="false" onMousePressed="#birthButtom" prefHeight="25.0" prefWidth="79.0" text="Рождение" />
+      <MenuButton layoutX="217.0" layoutY="25.0" mnemonicParsing="false" text="Погода">
+        <items>
+            <MenuItem fx:id="noPrecipitation" mnemonicParsing="false" onAction="#withoutButtom" text="Без осадков" />
+          <MenuItem fx:id="rainButtom" mnemonicParsing="false" onAction="#rButtom" text="Дождь" />
+          <MenuItem fx:id="snowButtom" mnemonicParsing="false" onAction="#sButtom" text="Снег" />
+        </items>
+      </MenuButton>
+      <ImageView fx:id="deathPic" fitHeight="127.0" fitWidth="280.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@pics/crosh/death.gif" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="birthPic" fitHeight="147.0" fitWidth="300.0" layoutX="5.0" layoutY="93.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@pics/crosh/wait.gif" />
+         </image>
+      </ImageView>
+      <Button fx:id="menu" layoutX="236.0" layoutY="249.0" mnemonicParsing="false" onMousePressed="#toMenu" text="Меню" />
+      <ProgressBar fx:id="deathProgress" layoutX="13.0" layoutY="70.0" prefHeight="17.0" prefWidth="191.0" progress="1.0" style="-fx-accent: RED;" visible="false" />
+   </children>
+</AnchorPane>
