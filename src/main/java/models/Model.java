@@ -85,7 +85,7 @@ public class Model {
             long exitMinutes = ois.readLong();
             age = (Age) ois.readObject();
 
-            System.out.println(age.getAge());
+
             Date date1 = new Date();
 
 
@@ -93,7 +93,6 @@ public class Model {
             timee = ((levelProgressBar / 0.01) * 1.8) - Math.abs(((date1.getDate() - exitDay)*24*60) - (date1.getHours() - exitHour) * 60
                     + (date1.getMinutes() - exitMinutes));
 
-            System.out.println("Time:" + timee);
 
 
             if (timee>0){
@@ -105,7 +104,7 @@ public class Model {
             if (timee<=0){
                 timee = ((levelProgressBar/0.01)*1.8) + ((deathProgressBar / 0.01) * 0.3) - Math.abs(((date1.getDate() - exitDay)*24*60) - ((date1.getHours() - exitHour) * 60)
                         - (date1.getMinutes() - exitMinutes));
-                System.out.println("Time after death:" + timee);
+
 
                 if ( timee > 0 ){
                     deathProgressBar = (((((levelProgressBar/0.01)*1.8) + (deathProgressBar/0.01)*0.3) - Math.abs(((date1.getDate() - exitDay)*24*60) - ((date1.getHours() - exitHour) * 60)
