@@ -2,10 +2,7 @@ package models;
 
 import impl.*;
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
+import java.io.*;
 import java.util.Date;
 import java.math.*;
 
@@ -91,7 +88,7 @@ public class Model {
 
 
             timee = ((levelProgressBar / 0.01) * 1.8) - Math.abs(((date1.getDate() - exitDay)*24*60) - (date1.getHours() - exitHour) * 60
-                    + (date1.getMinutes() - exitMinutes));
+                    - (date1.getMinutes() - exitMinutes)); //был плюс
 
             System.out.println("Time feeling :"+timee);
 
@@ -113,6 +110,11 @@ public class Model {
                 }
             }
 
+        if (timee<-32) {
+            File File = new File(getFileName());
+            FileWriter fileWriter = new FileWriter(fileName);
+            fileWriter.write(0);
+        }
 
         } catch (Exception ex) {
 
