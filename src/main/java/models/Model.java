@@ -113,13 +113,7 @@ public class Model {
                     liveOrDeath = false;
                 }
             }
-
-
-
-            System.out.println("Feeling:" + levelProgressBar);
-            System.out.println("DeathP:" + deathProgressBar);
-            System.out.println(exitHour);
-            System.out.println(exitMinutes);
+            
 
         } catch (Exception ex) {
 
