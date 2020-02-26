@@ -93,7 +93,7 @@ public class Model {
             timee = ((levelProgressBar / 0.01) * 1.8) - Math.abs(((date1.getDate() - exitDay)*24*60) - (date1.getHours() - exitHour) * 60
                     + (date1.getMinutes() - exitMinutes));
 
-
+            System.out.println("Time feeling :"+timee);
 
             if (timee>0){
                 levelProgressBar = ((((levelProgressBar / 0.01) * 1.8) - Math.abs(((date1.getDate() - exitDay)*24*60) - ((date1.getHours() - exitHour) * 60)
@@ -104,7 +104,7 @@ public class Model {
             if (timee<=0){
                 timee = ((levelProgressBar/0.01)*1.8) + ((deathProgressBar / 0.01) * 0.3) - Math.abs(((date1.getDate() - exitDay)*24*60) - ((date1.getHours() - exitHour) * 60)
                         - (date1.getMinutes() - exitMinutes));
-
+                System.out.println("Time killing :"+timee);
 
                 if ( timee > 0 ){
                     deathProgressBar = (((((levelProgressBar/0.01)*1.8) + (deathProgressBar/0.01)*0.3) - Math.abs(((date1.getDate() - exitDay)*24*60) - ((date1.getHours() - exitHour) * 60)

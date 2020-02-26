@@ -297,11 +297,12 @@ public class SonicController implements Initializable {
                 }
 
                 if (feeling.getProgress() > 0.07) {
-                    feelingKill();
+
                     deathProgress.setProgress(1);
                     deathProgress.setVisible(false);
                     modelSonic.saveFile(birth.isDisable());
                     moveToSonic.moveToX(img1);
+                    feelingKill();
                     timerDeath.cancel();
                     return;
                 }
@@ -318,7 +319,7 @@ public class SonicController implements Initializable {
 
     public void loadFile() {
 
-        if (birth.isDisable()) return;
+        //if (birth.isDisable()) return;
 
         if (modelSonic.loadFile()){
             if (modelSonic.getTime()>0){
@@ -353,7 +354,6 @@ public class SonicController implements Initializable {
                 birth.setDisable(true);
                 modelSonic.saveFile(birth.isDisable());
                 newGame();
-
 
             }
             else {
