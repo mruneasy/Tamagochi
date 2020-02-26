@@ -7,9 +7,10 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="275.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SecondController">
+<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="275.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CroshController">
    <children>
       <ImageView fitHeight="458.0" fitWidth="712.0" layoutX="-3.0" layoutY="-173.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -28,9 +29,9 @@
          </image>
       </ImageView>
       <Text layoutX="216.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Настроение:" wrappingWidth="75.0" />
-      <ImageView fx:id="carefully" fitHeight="88.0" fitWidth="148.0" layoutX="83.0" layoutY="141.0" pickOnBounds="true" preserveRatio="true" visible="false">
+      <ImageView fx:id="carefully" fitHeight="147.0" fitWidth="300.0" layoutX="5.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
-            <Image url="@pics/sonic/carefully.gif" />
+            <Image url="@pics/crosh/wait.gif" />
          </image>
       </ImageView>
       <ImageView fx:id="cry" fitHeight="165.0" fitWidth="368.0" layoutX="-32.0" layoutY="87.0" pickOnBounds="true" preserveRatio="true" visible="false">
@@ -48,7 +49,7 @@
             <Image url="@pics/sonic/snow.gif" />
          </image>
       </ImageView>
-      <Button id="button" fx:id="button" disable="true" layoutX="115.0" layoutY="25.0" mnemonicParsing="false" onMousePressed="#h" text="Покормить" />
+      <Button id="button" fx:id="button" disable="true" layoutX="115.0" layoutY="25.0" mnemonicParsing="false" onMousePressed="#feed" text="Покормить" />
       <Button fx:id="birth" layoutX="14.0" layoutY="25.0" mnemonicParsing="false" onMousePressed="#birthButtom" prefHeight="25.0" prefWidth="79.0" text="Рождение" />
       <MenuButton layoutX="217.0" layoutY="25.0" mnemonicParsing="false" text="Погода">
         <items>
@@ -69,5 +70,14 @@
       </ImageView>
       <Button fx:id="menu" layoutX="236.0" layoutY="249.0" mnemonicParsing="false" onMousePressed="#toMenu" text="Меню" />
       <ProgressBar fx:id="deathProgress" layoutX="13.0" layoutY="70.0" prefHeight="17.0" prefWidth="191.0" progress="1.0" style="-fx-accent: RED;" visible="false" />
+      <Text fx:id="age" layoutX="273.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" wrappingWidth="27.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="217.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Возраст :" wrappingWidth="58.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Text>
    </children>
 </AnchorPane>

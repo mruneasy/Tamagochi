@@ -1,4 +1,3 @@
-import iface.WorkWithFile;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -8,10 +7,8 @@ import javafx.stage.Stage;
 public class Main extends Application {
 
 
-
-
     @Override
-    public void start(Stage primaryStage) throws Exception{
+    public void start(Stage primaryStage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("home.fxml"));
         primaryStage.setTitle("Tamagochi");
         Scene scene = new Scene(root, 600, 275);

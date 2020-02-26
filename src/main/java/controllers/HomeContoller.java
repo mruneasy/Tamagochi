@@ -1,3 +1,5 @@
+package controllers;
+
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -8,13 +10,13 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
-import models.ModelSonic;
+import models.Model;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class Home implements Initializable {
+public class HomeContoller implements Initializable {
 
     @FXML
     private ImageView sonic;
@@ -26,11 +28,9 @@ public class Home implements Initializable {
     @FXML
     void selectSonic(MouseEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("sample.fxml"));
-
+        loader.setLocation(getClass().getClassLoader().getResource("sonic.fxml"));
         sonic.getScene().getWindow().hide();
         loader.load();
-
         Parent root = loader.getRoot();
         Stage stage = new Stage();
         stage.setScene(new Scene(root));
@@ -41,8 +41,7 @@ public class Home implements Initializable {
             @Override
             public void handle(WindowEvent event)
             {
-                SonicController controller = (SonicController) loader.getController();
-                //controller.saveFile();
+
                 System.exit(-1);
             }
         });
@@ -53,10 +52,12 @@ public class Home implements Initializable {
     @FXML
     void selectSecond(MouseEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("sample2.fxml"));
+        loader.setLocation(getClass().getClassLoader().getResource("crosh.fxml"));
+
 
         secondHero.getScene().getWindow().hide();
         loader.load();
+
 
         Parent root = loader.getRoot();
         Stage stage = new Stage();
@@ -72,8 +73,11 @@ public class Home implements Initializable {
         });
     }
 
+
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
     }
+
 }
