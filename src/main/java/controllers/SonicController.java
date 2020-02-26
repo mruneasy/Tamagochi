@@ -123,13 +123,14 @@ public class SonicController implements Initializable {
         modelSonic.getAge().setStartHour(date.getHours());
         modelSonic.getAge().setStartMinut(date.getMinutes());
 
-        age();
-        feelingKill();
         moveToSonic.moveToX(img1);
         birth.setDisable(true);
         birthPic.setVisible(false);
         img1.setVisible(true);
         button.setDisable(false);
+        age();
+        feelingKill();
+
 
 
     }

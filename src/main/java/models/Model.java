@@ -128,7 +128,7 @@ public class Model {
     }
 
     public void saveFile(boolean isBirth) {
-        if ( deathProgressBar<=0 ) return;
+        if ( deathProgressBar<=0 ) {return;}
 
         if (isBirth) {
         Date date1= new Date();
