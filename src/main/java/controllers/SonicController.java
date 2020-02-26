@@ -193,7 +193,6 @@ public class SonicController implements Initializable {
                     feeling.setProgress(modelSonic.rehab(feeling.getProgress()));
                     modelSonic.saveFile(birth.isDisable());
                 } else {
-                    System.out.println("finish");
                     img1.setVisible(true);
                     img.setVisible(false);
                     img1.setX(img.getX());
@@ -220,9 +219,6 @@ public class SonicController implements Initializable {
                     feeling.setProgress(modelSonic.getLevelFeeling() - 0.01);
                     modelSonic.setLevelFeeling(feeling.getProgress());
 
-                    System.out.println("FeelingKill method FileName: "+modelSonic.getFileName());
-                    System.out.println("FeelingKill method Feeling from View"+feeling.getProgress());
-                    System.out.println("FeelingKill method Feeling from Model"+modelSonic.getLevelFeeling());
                     modelSonic.saveFile(birth.isDisable());
                 } else if (feeling.getProgress() <= 0.012) {
                     feeling.setProgress(0);
@@ -314,10 +310,6 @@ public class SonicController implements Initializable {
 
                 modelSonic.saveFile(birth.isDisable());
 
-                System.out.println("Feeling from View"+feeling.getProgress());
-                System.out.println("Feeling from Model"+modelSonic.getLevelFeeling());
-                System.out.println("DeathLevel from View"+deathProgress.getProgress());
-                System.out.println("DeathLevel from Model"+modelSonic.getDeathProgressBar());
             }
         }, 0, 18000);
 
@@ -385,10 +377,8 @@ public class SonicController implements Initializable {
             @Override
             public void run() {
                 modelSonic.setTime(modelSonic.getTime()-1);
-                System.out.println("Time to Hill : "+modelSonic.getTime());
                 if (modelSonic.getTime() < -31) {
                     loadFile();
-                    System.out.println("go");
                     timerNewGame.cancel();
                 }
             }
