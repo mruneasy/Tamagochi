@@ -1,6 +1,5 @@
 package models;
 
-import impl.*;
 
 import java.io.*;
 import java.util.Date;
@@ -20,7 +19,6 @@ public class Model {
 
     private double timee;
 
-    private MoveToSonic moveToSonic = new MoveToSonic();
 
     private Age age = new Age();
 
