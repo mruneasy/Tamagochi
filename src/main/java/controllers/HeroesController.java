@@ -28,7 +28,7 @@ import java.util.TimerTask;
 
 public abstract class HeroesController implements Initializable {
 
-    private Model modelSonic = new Model("sonicSave.txt");
+    private Model modelSonic;
 
     private MoveToSonic moveToSonic = new MoveToSonic();
 

@@ -84,26 +84,25 @@ public class Model {
             Date date1 = new Date();
 
 
-
-            timee = ((levelProgressBar / 0.01) * 1.8) - Math.abs(((date1.getDate() - exitDay)*24*60) + (date1.getHours() - exitHour) * 60
-                    - (date1.getMinutes() - exitMinutes)); //был плюс
+            timee = ((levelProgressBar / 0.01) * 1.8) - Math.abs(((date1.getDate() - exitDay)*24*60) + (-(date1.getHours() - exitHour) * 60
+                    - (date1.getMinutes() - exitMinutes))); //был плюс
 
             System.out.println("Time feeling :"+timee);
 
             if (timee>0){
-                levelProgressBar = ((((levelProgressBar / 0.01) * 1.8) - Math.abs(((date1.getDate() - exitDay)*24*60) + ((date1.getHours() - exitHour) * 60)
-                        - (date1.getMinutes() - exitMinutes))) / 1.8 * 0.01) + 0.01;
+                levelProgressBar = ((((levelProgressBar / 0.01) * 1.8) - Math.abs(((date1.getDate() - exitDay)*24*60) +(-((date1.getHours() - exitHour) * 60)
+                        - (date1.getMinutes() - exitMinutes)))) / 1.8 * 0.01) + 0.01;
                 liveOrDeath = true;
             }
 
             if (timee<=0){
-                timee = ((levelProgressBar/0.01)*1.8) + ((deathProgressBar / 0.01) * 0.3) - Math.abs(((date1.getDate() - exitDay)*24*60) + ((date1.getHours() - exitHour) * 60)
-                        - (date1.getMinutes() - exitMinutes));
+                timee = ((levelProgressBar/0.01)*1.8) + ((deathProgressBar / 0.01) * 0.3) - Math.abs(((date1.getDate() - exitDay)*24*60) + (-((date1.getHours() - exitHour) * 60)
+                        - (date1.getMinutes() - exitMinutes)));
                 System.out.println("Time killing :"+timee);
 
                 if ( timee > 0 ){
-                    deathProgressBar = (((((levelProgressBar/0.01)*1.8) + (deathProgressBar/0.01)*0.3) - Math.abs(((date1.getDate() - exitDay)*24*60) + ((date1.getHours() - exitHour) * 60)
-                            - (date1.getMinutes() - exitMinutes))) / 0.3 * 0.01) + 0.01;
+                    deathProgressBar = (((((levelProgressBar/0.01)*1.8) + (deathProgressBar/0.01)*0.3) - Math.abs(((date1.getDate() - exitDay)*24*60) + (-((date1.getHours() - exitHour) * 60)
+                            - (date1.getMinutes() - exitMinutes)))) / 0.3 * 0.01) + 0.01;
                     liveOrDeath = false;
                 }
             }
