@@ -41,7 +41,7 @@ public class Age implements Serializable {
 
     public long getAge() {
         Date date = new Date();
-        age = Math.abs(((date.getDate() - startDay)*24*60) + (-((date.getHours() - startHour) * 60) - (date.getMinutes() - startMinut)));
+        age = Math.abs(((date.getDate() - startDay)*24*60) - (-(date.getHours() - startHour) * 60 - (date.getMinutes() - startMinut)));
         return age / 60;
 
     }
